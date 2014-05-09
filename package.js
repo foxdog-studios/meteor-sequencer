@@ -8,8 +8,8 @@ Package.on_use(function (api) {
   api.use('coffeescript', ['client', 'server']);
 
   // Our API
-  api.add_files('lib/client/audio_context.coffee', 'client');
   api.add_files('lib/client/metronome.coffee', 'client');
   api.add_files('lib/client/reactive_metronome.coffee', 'client');
+  api.add_files('lib/client/sequencer.coffee', 'client')
 });
 
