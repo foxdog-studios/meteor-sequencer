@@ -1,0 +1,10 @@
+{
+  "name": "sequencer",
+  "description": "Music sequencer for Meteor",
+  "homepage": "https://github.com/foxdog-studios/meteor-sequencer",
+  "author": "Lloyd Henning (https://github.com/eldog), Peter Sutton (https://github.com/dj-foxxy)",
+  "version": "0.0.1",
+  "git": "https://github.com/foxdog-studios/meteor-sequencer.git",
+  "packages": {
+  }
+}
