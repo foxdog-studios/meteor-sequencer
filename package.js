@@ -10,5 +10,6 @@ Package.on_use(function (api) {
   // Our API
   api.add_files('lib/client/audio_context.coffee', 'client');
   api.add_files('lib/client/metronome.coffee', 'client');
+  api.add_files('lib/client/reactive_metronome.coffee', 'client');
 });
 
