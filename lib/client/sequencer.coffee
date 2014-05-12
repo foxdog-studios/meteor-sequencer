@@ -1,5 +1,5 @@
 class @Sequencer
-  constructor: (@_cxt) ->
+  constructor: (@_ctx) ->
 
   createMetronome: (beatsPerMinute, ticksPerBeat) ->
     metronome = new Metronome @_ctx, beatsPerMinute, ticksPerBeat
