@@ -1,6 +1,5 @@
 class @Metronome
   constructor: (audioContext, beatsPerMinute, ticksPerBeat) ->
-    check audioContext, AudioContext
     check beatsPerMinute, Number
     check ticksPerBeat, Number
     @_audioContext = audioContext
