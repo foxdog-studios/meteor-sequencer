@@ -189,3 +189,25 @@ class @NoteParser
     pitch = new RelativePitch name, getInt(2), REFERENCE_NOTE if name?
     new Note duration, pitch
 
+class @AbcNoteParser
+  constructor: (@_noteLength) ->
+
+  parse: (abcNote) ->
+    if abcNote.note != 'rest'
+      noteName = abcNote.note[0].toLowerCase()
+      if abcNote.note.length == 1
+        octave = if abcNote.note == noteName then 5 else 4
+      else
+        octave = if abcNote.note[2] == ',' then 3 else 6
+
+      if (accidental = abcNote.accidental)?
+        if accidental == 'sharp'
+          noteName = "#{noteName}#"
+        else if accidental == 'flat'
+          noteName = "#{noteName}b"
+        else
+          throw "Unknown accidental: #{accidental}"
+      pitch = new RelativePitch noteName, octave, REFERENCE_NOTE if noteName?
+    duration = new Duration abcNote.duration, @_noteLength
+    new Note duration, pitch
+
