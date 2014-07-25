@@ -205,7 +205,7 @@ class @AbcNoteParser
           noteName = "#{noteName}#"
         else if accidental == 'flat'
           noteName = "#{noteName}b"
-        else
+        else if accidental != '='
           throw "Unknown accidental: #{accidental}"
       pitch = new RelativePitch noteName, octave, REFERENCE_NOTE if noteName?
     duration = new Duration abcNote.duration, @_noteLength
