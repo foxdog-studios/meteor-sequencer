@@ -1,24 +1,26 @@
 Package.describe({
-  summary: 'A reactive music sequencer'
+  summary: "[DON'T USE] A reactive music sequencer.",
+  version: "0.0.0",
+  git: "https://github.com/foxdog-studios/meteor-sequencer"
 });
 
-Package.on_use(function (api) {
-  api.use('check'       , ['client', 'server']);
-  api.use('coffeescript', ['client', 'server']);
-  api.use('underscore'  , ['client', 'server']);
+Package.onUse(function (api) {
+  api.versionsFrom('METEOR@0.9.0');
+  api.use([
+    "check",
+    "coffeescript",
+    "underscore"
+  ]);
 
-  var add_client = function (path) {
-    api.add_files('lib/client/' + path, 'client');
-  };
+  api.addFiles("lib/notes.coffee");
 
-  var add_shared = function (path) {
-    api.add_files('lib/' + path, ['client', 'server']);
-  };
-
-  add_shared('notes.coffee');
-
-  add_client('metronome.coffee');
-  add_client('reactive_metronome.coffee');
-  add_client('sequencer.coffee');
+  api.addFiles(
+    [
+      "lib/client/metronome.coffee",
+      "lib/client/reactive_metronome.coffee",
+      "lib/client/sequencer.coffee",
+    ],
+    "client"
+  );
 });
 

@@ -1,0 +1,31 @@
+{
+  "dependencies": [
+    [
+      "check",
+      "1.0.1"
+    ],
+    [
+      "coffeescript",
+      "1.0.3"
+    ],
+    [
+      "ejson",
+      "1.0.0"
+    ],
+    [
+      "json",
+      "1.0.0"
+    ],
+    [
+      "meteor",
+      "1.1.1"
+    ],
+    [
+      "underscore",
+      "1.0.0"
+    ]
+  ],
+  "pluginDependencies": [],
+  "toolVersion": "meteor-tool@1.0.32",
+  "format": "1.0"
+}
